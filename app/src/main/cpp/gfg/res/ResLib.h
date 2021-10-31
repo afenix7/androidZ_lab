@@ -7,7 +7,7 @@
 #include <vector>
 
 class ResLib {
-    std::vector<> m_res_list;
+    std::vector<int> m_res_list;
 };
 
 

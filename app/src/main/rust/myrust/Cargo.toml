@@ -1,0 +1,21 @@
+[package]
+name = "myrust"
+version = "0.1.0"
+authors = ["none"]
+
+[dependencies]
+log = "0.4.14"
+libc = "0.2.105"
+
+[target.'cfg(target_os = "android")'.dependencies]
+jni = "0.19.0"
+ndk = {version = "0.4.0", features = ["trace"]}
+android_logger = "0.10"
+
+[lib]
+crate_type = ["staticlib", "dylib"]
+
+[features]
+default = ["foo"]
+foo = []
+bar = []
